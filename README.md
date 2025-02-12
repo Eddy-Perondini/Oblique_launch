@@ -43,3 +43,34 @@ $x = v_{0}\cos\theta$
 - **Y position:**
 $y = v_{0}\sin\theta t - \frac{1}{2}gt^{2}$
 
+Through these steps, we were able to get sufficient information about the physical system in question, which are the coordinates in both axis $(x,y)$ and both velocities $(\vec{v_{x}}, \vec{v_{y}})$. Then, let's suppose we want to find the max altitude $y_{max}$. For this, we need to do some assumptions: when $y \rightarrow y_{max}$, the velocity $v_{y} \rightarrow 0$, which means that in the max altitude the particle still at rest. From this, we can find the time that gets to the particle reach the max altitude $y_{max}$. 
+
+$$0 = v_{0}\sin\theta - gt$$
+
+$$gt = v_{0}\sin\theta$$
+
+$$t = t_{max} = \frac{v_{0} \sin\theta}{g}$$
+
+Let's vary the angle $\theta$ and see how this affects the time $t_{max}$... 
+
+```markdown
+```python
+#Supposing values
+
+v_0 = 25 #m/s
+g = 9.81 #m/s^2
+
+theta = np.linspace(0,90, 50)
+theta_rad = np.radians(theta)
+
+#Converting degrees to radians, because numpy can only read angle values in radians
+
+t = v_0 * np.sin(theta_rad)/g
+
+plt.plot(theta_rad, t)
+plt.xlabel('Initial Angle [rad]')
+plt.ylabel('t_max [s]')
+plt.title('t_max over the different initial angles')
+plt.grid(True)
+plt.show()
+```
