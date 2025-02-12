@@ -74,3 +74,15 @@ plt.title('t_max over the different initial angles')
 plt.grid(True)
 plt.show()
 ```
+![Figure 1: Varying the angle to understand how the $t_{max} changes.$](download.png)
+
+Now, after obtaining the value of $t_{max}$, we can find out the expression that calculate $y_{max}$, considering that we have already found how to calculate the coordinate $y$. In this way, we replace the $t_{max}$ obtained in the follow expression: 
+
+
+$$y_{max} = v_{0}\sin\theta t_{max} - \frac{1}{2}gt_{max}^{2}$$
+
+$$y_{max} = v_{0}\sin\theta (\frac{v_{0}\sin\theta }{g}) - \frac{1}{2}g(\frac{v_{0}\sin\theta}{g})^{2}$$
+
+$$y_{max} = (\frac{(v_{0}\sin\theta)^2}{g}) - \frac{1}{2}g(\frac{1}{g^{2}})(v_{0}\sin\theta)^2$$
+
+$$y_{max} = \frac{(v_{0}\sin\theta )^2}{2g}$$
